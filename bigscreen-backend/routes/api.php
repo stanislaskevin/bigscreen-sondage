@@ -20,18 +20,3 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Api/login
-Route::post('/login', [AuthController::class, 'login']);
-
-// Api/admin
-Route::middleware(['auth'])->group(function () {
-    Route::get('/sondage/questionnaires', [SondageController::class, 'index']);
-    Route::get('/sondage/reponses', [SondageController::class, 'index']);
-});
-
-// Api/sondage
-Route::post('/sondage', [SondageController::class, 'new']);
-
-// Api/demo
-Route::get('/sondage/reponses', [SondageController::class, 'index']);
-Route::get('/sondage/reponses/{id}', [SondageController::class, 'show']);
