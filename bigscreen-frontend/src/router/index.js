@@ -6,6 +6,7 @@ import Login from '../views/Login.vue';
 import Home from '../views/admin/Home.vue';
 import Questionnaires from '../views/admin/Questionnaires.vue';
 import Reponses from '../views/admin/Reponses.vue';
+import PopupSuccess from '../components/PopupSuccess.vue';
 
 const routes = [
   // Route Client
@@ -40,6 +41,12 @@ const routes = [
     path: '/admin/reponses',
     name: 'Reponses',
     component: Reponses,
+  },
+
+  {
+    path: '/popupSuccess',
+    name: 'PopupSuccess',
+    component: PopupSuccess,
   },
 ];
 

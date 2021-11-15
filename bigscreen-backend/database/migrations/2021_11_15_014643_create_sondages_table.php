@@ -16,8 +16,8 @@ class CreateSondagesTable extends Migration
         Schema::create('sondages', function (Blueprint $table) {
             $table->id();
             $table->string('q1');
-            $table->integer('q2')->nullable();
-            $table->string('q3')->nullable();
+            $table->string('q2')->nullable();
+            $table->integer('q3')->nullable();
             $table->integer('q4')->nullable();
             $table->string('q5')->nullable();
             $table->string('q6')->nullable();

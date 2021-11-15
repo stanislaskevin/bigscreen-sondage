@@ -3,7 +3,7 @@
         <div class="nav">
             <router-link to="/login"><button class="login_nav">Login</button></router-link>
         </div>
-        <section>
+        <section >
             <div class="entete">
                 <h1>Bigscreen</h1>
                 <p>Vous pouvez consulter vos réponses ici.</p>
@@ -117,15 +117,26 @@
 </template>
 
 <script>
+import axios from 'axios'
     export default {
         props : {
             sondages:{
                 type: Array
-            },
-            reponse: {
-                type: Object
+            },           
+        },
+        data() {
+            return {
+                reponse: []
             }
-        },       
+        },
+        mounted() {
+            const id = this.$route.params.id 
+            if(id>0){        
+            axios.get(`http://127.0.0.1:8000/api/sondage/reponses/${id}`).then((r)=>{
+                    this.reponse = r.data
+                }).catch(error=>console.log(error))
+            }
+        }      
     }
 </script>
 

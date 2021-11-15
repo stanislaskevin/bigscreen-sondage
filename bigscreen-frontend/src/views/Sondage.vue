@@ -248,8 +248,6 @@
                 return true;
             },
             onSubmit() {
-                 this.validated = this.validateData();
-                    if(this.validated == false)  return;
                 this.$emit('new-sondage', {
                     q1: this.q1,
                     q2:  this.q2,
@@ -274,7 +272,7 @@
                 })
 
                 //afficher popup after validation
-                this.$router.push(`/reponses/1`)
+                this.$router.push('/popupSuccess')
             }
         }
     }
