@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Sondage from '../views/Sondage.vue';
 import Reponse from '../views/Reponse.vue';
+import Login from '../views/Login.vue';
 
 import Home from '../views/admin/Home.vue';
 import Questionnaires from '../views/admin/Questionnaires.vue';
@@ -17,6 +18,11 @@ const routes = [
     path: '/reponse/:id',
     name: 'Reponse',
     component: Reponse,
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login,
   },
 
   // Route Admin
