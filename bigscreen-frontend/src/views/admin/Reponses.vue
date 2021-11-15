@@ -3,7 +3,7 @@
         <header>
             <div class="nav">
                 <router-link to="/admin">Acceuil</router-link>
-                <router-link to="/admin/questionnaires">Questionnaire</router-link>
+                <router-link to="/admin/questionnaires">Questionnaires</router-link>
                 <router-link to="/admin/reponses">Reponses</router-link>
             </div>
         </header>
